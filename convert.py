@@ -12,9 +12,9 @@ from collections import defaultdict
 
 import numpy as np
 from keras import backend as K
-from keras.layers import (Conv2D, Input, ZeroPadding2D, Add,
-                          UpSampling2D, MaxPooling2D, Concatenate)
-from keras.layers.advanced_activations import LeakyReLU
+from tensorflow.keras.layers import Conv2D, Input, ZeroPadding2D, BatchNormalization, Activation
+from tensorflow.keras.layers import LeakyReLU, Add, UpSampling2D, Concatenate
+from tensorflow.keras.models import Model
 from keras.layers.normalization import BatchNormalization
 from keras.models import Model
 from keras.regularizers import l2
